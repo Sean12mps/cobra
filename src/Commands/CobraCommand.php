@@ -11,6 +11,9 @@ use Pantheon\Terminus\Models\Site;
 class SwpCommand extends SiteCommand
 {
 
+	private $args = false;
+	private $assoc_args;
+
     /**
      * Main functions.
      *
@@ -18,7 +21,7 @@ class SwpCommand extends SiteCommand
      *
      * @since 1.0.0
      */
-    public function cobra()
+    public function cobra($args=false,$assoc_args=array())
     {
 
         // 	Load helpers.
@@ -27,8 +30,15 @@ class SwpCommand extends SiteCommand
         // 	Initiate helpers.
         $this->initiate_helpers();
 
+        // 	Parse arguments.
+        $this->assoc_args = $assoc_args;
+
+        if ($args){
+	        $args = $this->parse_arguments($args);
+        }
+
         // 	Work.
-        $this->forge();
+        $this->forge($args);
 
     }
 
@@ -37,8 +47,24 @@ class SwpCommand extends SiteCommand
      *
      * @since 1.0.0
      */
-    private function forge()
+    private function parse_arguments($args=false)
     {
+
+    	//	Parse arguments here.
+    	$this->args = $args;
+
+    }
+
+    /**
+     * Brew commands here.
+     *
+     * @since 1.0.0
+     */
+    private function forge($args=false)
+    {
+
+    	//	Write commands here.
+
     }
 
     /**
@@ -48,6 +74,9 @@ class SwpCommand extends SiteCommand
      */
     private function initiate_helpers()
     {
+
+    	//	Initiate helpers here.
+
     }
 
     /**
