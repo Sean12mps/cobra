@@ -1,0 +1,12 @@
+# Composer #
+############
+composer.lock
+vendor
+bats
+bin
+libexec
+share
+
+# License #
+############
+LICENSE

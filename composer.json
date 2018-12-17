@@ -1,0 +1,22 @@
+{
+    "name": "DinkumInteractive/cobra",
+    "description": "Pool previous usable commands.",
+    "type": "terminus-plugin",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": { "Pantheon\\SWP\\": "src" }
+    },
+    "require-dev": {
+        "squizlabs/php_codesniffer": "2.9.1"
+    },
+    "extra": {
+        "terminus": {
+            "compatible-version": "1.*"
+        }
+    },
+    "scripts": {
+        "cs": "phpcs --standard=PSR2 -n src",
+        "cbf": "phpcbf --standard=PSR2 -n src",
+        "test": "libexec/bats test"
+    }
+}
